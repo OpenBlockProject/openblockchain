@@ -1,0 +1,14 @@
+syntax = "proto3";
+package OpenBlockProject.openblockchain.openblockchain;
+
+import "gogoproto/gogo.proto";
+import "openblockchain/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "github.com/OpenBlockProject/openblockchain/x/openblockchain/types";
+
+// GenesisState defines the openblockchain module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
